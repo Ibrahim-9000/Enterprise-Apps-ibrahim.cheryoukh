@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NGO Anderlecht - Over ons</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 flex flex-col min-h-screen">
+
+    <div th:replace="~{fragments/layout :: navbar}"></div>
+
+    <main class="max-w-4xl mx-auto px-4 py-10 flex-grow w-full">
+        <h1 class="text-3xl font-bold text-green-800 mb-2">Over NGO Anderlecht</h1>
+        <p class="text-gray-500 mb-8">Wie zijn we en wat doen we?</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <!-- Beschrijving -->
+            <div class="md:col-span-2 bg-white rounded-xl shadow p-8">
+                <h2 class="text-xl font-semibold text-green-800 mb-4">Onze missie</h2>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    Wij zetten ons in voor gemeenschapsbouwen en hulp aan mensen die het minder breed hebben in Anderlecht.
+                </p>
+                <p class="text-gray-600 leading-relaxed">
+                    Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime
+                    placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+                </p>
+            </div>
+
+            <!-- Contactgegevens -->
+            <div class="bg-white rounded-xl shadow p-8">
+                <h2 class="text-xl font-semibold text-green-800 mb-4">Contactgegevens</h2>
+
+                <div class="space-y-4">
+                    <div>
+                        <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">Adres</p>
+                        <p class="text-gray-700">Kaaiplein 1</p>
+                        <p class="text-gray-700">1000 Brussel</p>
+                        <p class="text-gray-500 text-sm">(Campus Kaai)</p>
+                    </div>
+                    <hr class="border-gray-100"/>
+                    <div>
+                        <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">E-mail</p>
+                        <a href="mailto:info@ngo-anderlecht.be"
+                           class="text-green-700 hover:underline">info@ngo-anderlecht.be</a>
+                    </div>
+                    <hr class="border-gray-100"/>
+                    <div>
+                        <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">Telefoon</p>
+                        <p class="text-gray-700">+32 2 123 45 67</p>
+                    </div>
+                    <hr class="border-gray-100"/>
+                    <div>
+                        <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">Openingsuren</p>
+                        <p class="text-gray-700 text-sm">Ma – Vr: 9u – 17u</p>
+                        <p class="text-gray-500 text-sm">Za – Zo: Gesloten</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div th:replace="~{fragments/layout :: footer}"></div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NGO Anderlecht - Contact</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 flex flex-col min-h-screen">
+
+    <div th:replace="~{fragments/layout :: navbar}"></div>
+
+    <main class="max-w-2xl mx-auto px-4 py-10 flex-grow w-full">
+        <h1 class="text-3xl font-bold text-green-800 mb-2">Contacteer ons</h1>
+        <p class="text-gray-500 mb-8">Stuur ons een bericht en we antwoorden zo snel mogelijk.</p>
+
+        <!-- Succesmelding -->
+        <div th:if="${succes}"
+             class="mb-6 bg-green-50 border border-green-300 text-green-800 rounded-lg px-4 py-3">
+            ✅ <span th:text="${succes}"></span>
+        </div>
+
+        <!-- Foutmelding -->
+        <div th:if="${fout}"
+             class="mb-6 bg-red-50 border border-red-300 text-red-700 rounded-lg px-4 py-3">
+            ⚠️ <span th:text="${fout}"></span>
+        </div>
+
+        <div class="bg-white rounded-xl shadow p-8">
+            <form th:action="@{/contact}" method="post" class="space-y-5">
+
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-1">Naam *</label>
+                    <input type="text" name="naam" placeholder="Jouw naam"
+                           class="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-green-500"/>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-1">E-mailadres *</label>
+                    <input type="email" name="email" placeholder="jouw@email.be"
+                           class="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-green-500"/>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-1">Bericht *</label>
+                    <textarea name="bericht" rows="5" placeholder="Schrijf hier je bericht..."
+                              class="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
+                </div>
+
+                <button type="submit"
+                        class="bg-green-700 text-white font-semibold px-6 py-2.5 rounded-lg hover:bg-green-800 transition shadow">
+                    Verstuur bericht
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <div th:replace="~{fragments/layout :: footer}"></div>
+</body>
+</html>

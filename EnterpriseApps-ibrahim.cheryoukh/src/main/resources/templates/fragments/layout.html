@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<!-- NAVBAR FRAGMENT -->
+<nav th:fragment="navbar" class="bg-green-800 text-white shadow-md">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+        <a th:href="@{/}" class="text-xl font-bold tracking-wide hover:text-green-200 transition">
+            🌿 NGO Anderlecht
+        </a>
+        <div class="flex gap-6 text-sm font-medium">
+            <a th:href="@{/events/new}" class="hover:text-green-200 transition">Nieuw evenement</a>
+            <a th:href="@{/about}" class="hover:text-green-200 transition">Over ons</a>
+            <a th:href="@{/contact}" class="hover:text-green-200 transition">Contact</a>
+        </div>
+    </div>
+</nav>
+
+<!-- FOOTER FRAGMENT -->
+<footer th:fragment="footer" class="bg-green-900 text-green-200 text-center text-sm py-4 mt-auto">
+    <p>&copy; 2025 NGO Anderlecht. Alle rechten voorbehouden.</p>
+</footer>
+
+</html>
