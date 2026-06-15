@@ -42,7 +42,7 @@ Werkend prototype van een vernieuwde website voor een Anderlechtse NGO die zich 
 
 Voor dit project heb ik gebruik gemaakt van Claude (Anthropic) als hulpmiddel bij enkele onderdelen.
 
-Link naar de chatgeschiedenis: ← HIER JE LINK PLAKKEN
+Link naar de chatgeschiedenis: [← HIER JE LINK PLAKKEN](https://claude.ai/)
 
 AI werd gebruikt voor:
 - Hulp bij WSL en MySQL installatie en configuratie
